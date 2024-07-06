@@ -1,0 +1,39 @@
+<resources>
+    <string name="app_name">ky_tuc_xa_ui</string>
+
+    <!-- Custom Dropdown Popup Background Style -->
+    <style name="DropdownMenuPopupBackground" parent="Widget.AppCompat.ListPopupWindow">
+        <item name="android:popupBackground">@color/dropdown_background</item>
+        <item name="android:textColor">@color/dropdown_text</item>
+    </style>
+    <!---->
+    <string-array name="chon_khu_options">
+        <item>Tất cả</item>
+        <item>A1</item>
+        <item>A2</item>
+        <item>A3</item>
+        <item>A4</item>
+        <item>A5</item>
+    </string-array>
+
+    <string-array name="chon_cum_options">
+        <item>Tất cả</item>
+        <item>Cụm 1</item>
+        <item>Cụm 2</item>
+        <item>Cụm 3</item>
+        <item>Cụm 4</item>
+        <item>Cụm 5</item>
+    </string-array>
+
+    <!---->
+    <string-array name="chon_nha_options">
+        <item>Tất cả</item>
+        <item>Nhà 1</item>
+        <item>Nhà 2</item>
+        <item>Nhà 3</item>
+        <item>Nhà 4</item>
+        <item>Nhà 5</item>
+    </string-array>
+
+
+</resources>

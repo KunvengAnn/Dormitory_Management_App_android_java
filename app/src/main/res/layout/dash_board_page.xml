@@ -1,0 +1,727 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:ignore="ScrollViewSize,UselessLeaf">
+
+            <!--start app bar-->
+            <com.google.android.material.appbar.AppBarLayout
+                android:id="@+id/id_AppBarLayoutDashBoard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/toolbar"
+                    android:background="@color/blue_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    app:contentInsetStart="0dp"
+                    app:contentInsetLeft="0dp"
+                    app:contentInsetRight="0dp"
+                    app:contentInsetEnd="0dp">
+
+                    <!---->
+                    <RelativeLayout
+                        android:id="@+id/HeaderRelative"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:layout_marginBottom="5dp">
+
+                        <ImageView
+                            android:id="@+id/id_btn_backInfo"
+                            android:layout_marginLeft="10dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:background="@drawable/arrow_back_icon" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:text="Dash Board"
+                            android:textStyle="bold"
+                            android:textSize="22dp"
+                            android:textColor="@color/white"
+                            tools:ignore="HardcodedText" />
+                    </RelativeLayout>
+                    <!--end-->
+                </androidx.appcompat.widget.Toolbar>
+            </com.google.android.material.appbar.AppBarLayout>
+            <!--end of App Bar-->
+
+            <RelativeLayout
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_below="@id/id_AppBarLayoutDashBoard"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <!--drop down 1-->
+                <LinearLayout
+                    android:id="@+id/linearLayout_for_drop_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="15dp"
+                        android:text="Chọn khu"
+                        android:textColor="@android:color/black"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        tools:ignore="RtlHardcoded" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:background="@drawable/rounded_border"
+                        android:gravity="center_vertical">
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:background="@drawable/style_dropdown_border"
+                            tools:ignore="ObsoleteLayoutParam">
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <Spinner
+                            android:id="@+id/spinnerKhu"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:background="@null"
+                            android:popupBackground="@color/white"
+                            android:textColor="@color/dropdown_text"
+                            tools:ignore="HardcodedText,LabelFor" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <!--drop dơm 2-->
+                <LinearLayout
+                    android:layout_below="@id/linearLayout_for_drop_1"
+                    android:id="@+id/linearLayout_for_drop_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="5dp"
+                        android:text="Chọn Cụm"
+                        android:textColor="@android:color/black"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        tools:ignore="RtlHardcoded" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:background="@drawable/rounded_border"
+                        android:gravity="center_vertical">
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:background="@drawable/style_dropdown_border"
+                            tools:ignore="ObsoleteLayoutParam">
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <Spinner
+                            android:id="@+id/spinnerCum"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:background="@null"
+                            android:popupBackground="@color/white"
+                            android:textColor="@color/dropdown_text"
+                            tools:ignore="HardcodedText,LabelFor" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <!--drop down 3-->
+                <LinearLayout
+                    android:id="@+id/linearLayout_for_drop_3"
+                    android:layout_below="@+id/linearLayout_for_drop_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="15dp"
+                        android:text="Chọn nhà"
+                        android:textColor="@android:color/black"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        tools:ignore="RtlHardcoded" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:background="@drawable/rounded_border"
+                        android:gravity="center_vertical">
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:background="@drawable/style_dropdown_border"
+                            tools:ignore="ObsoleteLayoutParam">
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <Spinner
+                            android:id="@+id/spinnerNha"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:background="@null"
+                            android:popupBackground="@color/white"
+                            android:textColor="@color/dropdown_text"
+                            tools:ignore="HardcodedText,LabelFor" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <!--Text Thong ke ...-->
+                <LinearLayout
+                    android:id="@id/linearLayout_Report"
+                    android:layout_below="@+id/linearLayout_for_drop_3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical|bottom"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:contentDescription="TODO"
+                        android:src="@drawable/increase_line"
+                        tools:ignore="ContentDescription,HardcodedText" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text="Thống kế nhà phòng"
+                        android:textStyle="bold"
+                        android:textSize="22dp"
+                        tools:ignore="HardcodedText,RtlHardcoded,SpUsage" />
+                </LinearLayout>
+
+                <!--4 container-->
+                <LinearLayout
+                    android:id="@id/linearLayout_4_item"
+                    android:layout_below="@+id/linearLayout_Report"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:orientation="horizontal">
+
+                        <!--item 1-->
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="100dp"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
+                            android:background="@drawable/style_simple_border">
+
+                            <ImageView
+                                android:layout_marginLeft="5dp"
+                                android:id="@+id/id_img_home"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:src="@drawable/home"/>
+
+                            <LinearLayout
+                                android:layout_marginLeft="10dp"
+                                android:layout_toRightOf="@+id/id_img_home"
+                                android:layout_width="70dp"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textStyle="bold"
+                                    android:textSize="15dp"
+                                    android:textColor="@color/blue_1"
+                                    android:text="48"
+                                    tools:ignore="HardcodedText" />
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textStyle="bold"
+                                    android:textSize="15dp"
+                                    android:textColor="@color/blue_1"
+                                    android:text="Nhà"
+                                    tools:ignore="HardcodedText" />
+                            </LinearLayout>
+
+                        </RelativeLayout>
+                        <!-- Spacer View -->
+                        <View
+                            android:layout_width="10dp"
+                            android:layout_height="wrap_content" />
+                        <!--item 2-->
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="100dp"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
+                            android:background="@drawable/style_simple_border">
+
+                            <ImageView
+                                android:layout_marginLeft="5dp"
+                                android:id="@+id/id_img_room"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:src="@drawable/room"/>
+
+                            <LinearLayout
+                                android:layout_marginLeft="10dp"
+                                android:layout_toRightOf="@+id/id_img_room"
+                                android:layout_width="70dp"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textStyle="bold"
+                                    android:textSize="15dp"
+                                    android:textColor="@color/green"
+                                    android:text="48"
+                                    tools:ignore="HardcodedText" />
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textStyle="bold"
+                                    android:textSize="15dp"
+                                    android:textColor="@color/green"
+                                    android:text="Phòng"
+                                    tools:ignore="HardcodedText" />
+                            </LinearLayout>
+
+                        </RelativeLayout>
+                    </LinearLayout>
+                    <!-- Spacer View -->
+                    <View
+                        android:layout_width="wrap_content"
+                        android:layout_height="10dp" />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:orientation="horizontal">
+
+                        <!--item 1-->
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="100dp"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
+                            android:background="@drawable/style_simple_border">
+
+                            <ImageView
+                                android:layout_marginLeft="5dp"
+                                android:id="@+id/id_img_renting"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:src="@drawable/renting"/>
+
+                            <LinearLayout
+                                android:layout_marginLeft="10dp"
+                                android:layout_toRightOf="@+id/id_img_renting"
+                                android:layout_width="70dp"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textStyle="bold"
+                                    android:textSize="15dp"
+                                    android:textColor="@color/orange_1"
+                                    android:text="48"
+                                    tools:ignore="HardcodedText" />
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textStyle="bold"
+                                    android:textSize="15dp"
+                                    android:textColor="@color/orange_1"
+                                    android:text="Đang thuê"
+                                    tools:ignore="HardcodedText" />
+                            </LinearLayout>
+
+                        </RelativeLayout>
+                        <!-- Spacer View -->
+                        <View
+                            android:layout_width="10dp"
+                            android:layout_height="wrap_content" />
+                        <!--item 2-->
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="100dp"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
+                            android:background="@drawable/style_simple_border">
+
+                            <ImageView
+                                android:layout_marginLeft="5dp"
+                                android:id="@+id/id_img_give_room"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:src="@drawable/give_room"/>
+
+                            <LinearLayout
+                                android:layout_marginLeft="10dp"
+                                android:layout_toRightOf="@+id/id_img_give_room"
+                                android:layout_width="70dp"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="48"
+                                    android:textStyle="bold"
+                                    android:textSize="15dp"
+                                    android:textColor="@color/blue_2"
+                                    tools:ignore="HardcodedText" />
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textStyle="bold"
+                                    android:textSize="15dp"
+                                    android:textColor="@color/blue_2"
+                                    android:text="Trả phòng"
+                                    tools:ignore="HardcodedText" />
+                            </LinearLayout>
+
+                        </RelativeLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!--all Result Sinh Viên-->
+                <LinearLayout
+                    android:layout_below="@+id/linearLayout_4_item"
+                    android:id="@+id/linearlayout_text_report"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical|bottom"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/student_graduates"/>
+
+                    <TextView
+                        android:layout_marginLeft="5dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="20dp"
+                        android:textStyle="bold"
+                        android:text="Thống kế các thông tin về sinh viên"/>
+                </LinearLayout>
+
+               <!--all report percentages-->
+                <LinearLayout
+                    android:layout_below="@+id/linearlayout_text_report"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:orientation="vertical">
+
+                    <!--item_Report_circle_percentage_1-->
+                    <RelativeLayout
+                        android:id="@+id/item_Report_circle_percentage_1"
+                        android:layout_marginTop="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:background="@drawable/style_simple_border"
+                        tools:ignore="InefficientWeight,UselessParent">
+
+                        <!--here show percentage-->
+                        <RelativeLayout
+                            android:id="@+id/RelativeLayout_circular_percentage_1"
+                            android:layout_width="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_height="wrap_content">
+
+                            <com.mikhaellopez.circularprogressbar.CircularProgressBar
+                                android:id="@+id/circularProgressBar"
+                                android:layout_width="80dp"
+                                android:layout_height="80dp"
+                                android:layout_centerInParent="true"
+                                app:cpb_background_progressbar_color="@color/gray"
+                                app:cpb_background_progressbar_width="15dp"
+                                app:cpb_progressbar_color="@color/blue_1"
+                                app:cpb_progressbar_width="20dp"
+                                app:cpb_start_angle="0"
+                                app:cpb_progress="30"/>
+
+                            <TextView
+                                android:id="@+id/txtProgress"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignBottom="@id/circularProgressBar"
+                                android:layout_centerInParent="true"
+                                android:text="30%"
+                                android:textAppearance="?android:attr/textAppearanceSmall" />
+                        </RelativeLayout>
+
+                        <LinearLayout
+                            android:layout_marginTop="10dp"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="10dp"
+                            android:layout_toEndOf="@+id/RelativeLayout_circular_percentage_1"
+                            android:layout_width="290dp"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="188"
+                                android:textSize="20dp"
+                                android:textStyle="bold"
+                                android:textColor="@color/blue_1"
+                                tools:ignore="HardcodedText" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/blue_1"
+                                android:textSize="16dp"
+                                android:textStyle="bold"
+                                android:text="Sinh viên chưa chụp hình"
+                                tools:ignore="HardcodedText" />
+                        </LinearLayout>
+                    </RelativeLayout>
+
+                    <!--item_Report_circle_percentage_2-->
+                    <RelativeLayout
+                        android:id="@+id/item_Report_circle_percentage_2"
+                        android:layout_marginTop="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:background="@drawable/style_simple_border"
+                        tools:ignore="InefficientWeight,UselessParent">
+
+                        <!--here show percentage-->
+                        <RelativeLayout
+                            android:id="@+id/RelativeLayout_circular_percentage_2"
+                            android:layout_width="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_height="wrap_content">
+
+                            <com.mikhaellopez.circularprogressbar.CircularProgressBar
+                                android:id="@+id/circularProgressBar_have_image"
+                                android:layout_width="80dp"
+                                android:layout_height="80dp"
+                                android:layout_centerInParent="true"
+                                app:cpb_background_progressbar_color="@color/gray"
+                                app:cpb_background_progressbar_width="15dp"
+                                app:cpb_progressbar_color="@color/green"
+                                app:cpb_progressbar_width="20dp"
+                                app:cpb_start_angle="0"
+                                app:cpb_progress="30"/>
+
+                            <TextView
+                                android:id="@+id/txtProgress"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignBottom="@id/circularProgressBar_have_image"
+                                android:layout_centerInParent="true"
+                                android:text="30%"
+                                android:textAppearance="?android:attr/textAppearanceSmall" />
+                        </RelativeLayout>
+
+                        <LinearLayout
+                            android:layout_marginTop="10dp"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="10dp"
+                            android:layout_toEndOf="@+id/RelativeLayout_circular_percentage_2"
+                            android:layout_width="290dp"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="48"
+                                android:textSize="20dp"
+                                android:textStyle="bold"
+                                android:textColor="@color/green"
+                                tools:ignore="HardcodedText" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/green"
+                                android:textSize="16dp"
+                                android:textStyle="bold"
+                                android:text="Sinh viên đã chụp hình"
+                                tools:ignore="HardcodedText" />
+                        </LinearLayout>
+                    </RelativeLayout>
+
+                    <!--item_Report_circle_percentage_3-->
+                    <RelativeLayout
+                        android:id="@+id/item_Report_circle_percentage_3"
+                        android:layout_marginTop="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:background="@drawable/style_simple_border"
+                        tools:ignore="InefficientWeight,UselessParent">
+
+                        <!--here show percentage-->
+                        <RelativeLayout
+                            android:id="@+id/RelativeLayout_circular_percentage_3"
+                            android:layout_width="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_height="wrap_content">
+
+                            <com.mikhaellopez.circularprogressbar.CircularProgressBar
+                                android:id="@+id/circularProgressBar_student_no_put_data"
+                                android:layout_width="80dp"
+                                android:layout_height="80dp"
+                                android:layout_centerInParent="true"
+                                app:cpb_background_progressbar_color="@color/gray"
+                                app:cpb_background_progressbar_width="15dp"
+                                app:cpb_progressbar_color="@color/blue_2"
+                                app:cpb_progressbar_width="20dp"
+                                app:cpb_start_angle="0"
+                                app:cpb_progress="30"/>
+
+                            <TextView
+                                android:id="@+id/txtProgress"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignBottom="@id/circularProgressBar_have_image"
+                                android:layout_centerInParent="true"
+                                android:text="30%"
+                                android:textAppearance="?android:attr/textAppearanceSmall" />
+                        </RelativeLayout>
+
+                        <LinearLayout
+                            android:layout_marginTop="10dp"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="10dp"
+                            android:layout_toEndOf="@+id/RelativeLayout_circular_percentage_3"
+                            android:layout_width="290dp"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="48"
+                                android:textSize="20dp"
+                                android:textStyle="bold"
+                                android:textColor="@color/blue_2"
+                                tools:ignore="HardcodedText" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/blue_2"
+                                android:textSize="16dp"
+                                android:textStyle="bold"
+                                android:text="Sinh viên chưa cấp nhật hố sơ"
+                                tools:ignore="HardcodedText" />
+                        </LinearLayout>
+                    </RelativeLayout>
+
+                    <!--item_Report_circle_percentage_4-->
+                    <RelativeLayout
+                        android:id="@+id/item_Report_circle_percentage_4"
+                        android:layout_marginTop="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:background="@drawable/style_simple_border"
+                        tools:ignore="InefficientWeight,UselessParent">
+
+                        <!--here show percentage-->
+                        <RelativeLayout
+                            android:id="@+id/RelativeLayout_circular_percentage_4"
+                            android:layout_width="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_height="wrap_content">
+
+                            <com.mikhaellopez.circularprogressbar.CircularProgressBar
+                                android:id="@+id/circularProgressBar_4"
+                                android:layout_width="80dp"
+                                android:layout_height="80dp"
+                                android:layout_centerInParent="true"
+                                app:cpb_background_progressbar_color="@color/gray"
+                                app:cpb_background_progressbar_width="15dp"
+                                app:cpb_progressbar_color="@color/orange_1"
+                                app:cpb_progressbar_width="20dp"
+                                app:cpb_start_angle="0"
+                                app:cpb_progress="30"
+                                tools:ignore="DuplicateIds" />
+
+                            <TextView
+                                android:id="@+id/txtProgress"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignBottom="@id/circularProgressBar_4"
+                                android:layout_centerInParent="true"
+                                android:text="30%"
+                                android:textAppearance="?android:attr/textAppearanceSmall" />
+                        </RelativeLayout>
+
+                        <LinearLayout
+                            android:layout_marginTop="10dp"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="10dp"
+                            android:layout_toEndOf="@+id/RelativeLayout_circular_percentage_4"
+                            android:layout_width="290dp"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="48"
+                                android:textSize="20dp"
+                                android:textStyle="bold"
+                                android:textColor="@color/orange_1"
+                                tools:ignore="HardcodedText" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/orange_1"
+                                android:textSize="16dp"
+                                android:textStyle="bold"
+                                android:text="I don't know"
+                                tools:ignore="HardcodedText" />
+                        </LinearLayout>
+                    </RelativeLayout>
+                </LinearLayout>
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

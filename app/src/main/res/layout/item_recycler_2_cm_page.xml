@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="250dp"
+    android:orientation="vertical">
+
+    <!-- Text Floor (Tang) -->
+    <LinearLayout
+        android:id="@+id/linearLayout_detail_each_Floor"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            android:text="Tầng "
+            tools:ignore="HardcodedText" />
+        <TextView
+            android:id="@+id/id_text_floor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            tools:ignore="HardcodedText" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="10dp"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/arrow_up_24"/>
+    </LinearLayout>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_margin="5dp"
+        card_view:cardBackgroundColor="@color/white"
+        card_view:cardCornerRadius="15dp"
+        card_view:cardElevation="8dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/id_recycler_room"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textSize="19dp"
+                android:text="Phòng 101"
+                android:layout_gravity="center_vertical"
+                tools:ignore="HardcodedText,SpUsage" />
+
+            <!-- Vertical line -->
+            <View
+                android:layout_width="2dp"
+                android:layout_height="match_parent"
+                android:background="@android:color/darker_gray"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"/>
+
+            <!-- Add other elements here, e.g., another TextView -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="18dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:text="Khu A101 - P101"
+                    tools:ignore="HardcodedText,SpUsage" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/id_type_room"
+                        android:textSize="18dp"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Loại phòng"
+                        tools:ignore="HardcodedText,SpUsage" />
+
+                    <!--add a bit space-->
+                    <View
+                        android:layout_toRightOf="@+id/id_type_room"
+                        android:id="@+id/id_space_type_Room"
+                        android:layout_width="20dp"
+                        android:layout_height="10dp"
+                        tools:ignore="RtlHardcoded" />
+
+                    <TextView
+                        android:id="@+id/id_dt_type_Room"
+                        android:layout_toRightOf="@+id/id_space_type_Room"
+                        android:textSize="18dp"
+                        android:textColor="@color/black"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Phòng dịch vụ 4 sinh viên"
+                        tools:ignore="RtlHardcoded,SpUsage" />
+
+                    <TextView
+                        android:textSize="17dp"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:id="@+id/id_text_room_price"
+                        android:layout_below="@+id/id_dt_type_Room"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Đơn gìa phòng"
+                        tools:ignore="HardcodedText,SpUsage" />
+                    <!--add a bit space-->
+                   <View
+                       android:layout_below="@+id/id_dt_type_Room"
+                       android:layout_toRightOf="@id/id_text_room_price"
+                       android:id="@+id/id_room_dt_price"
+                       android:layout_width="20dp"
+                       android:layout_height="20dp"/>
+
+                    <TextView
+                        android:id="@+id/id_price__room"
+                        android:layout_below="@+id/id_dt_type_Room"
+                        android:layout_toRightOf="@+id/id_room_dt_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="650.000 VND"
+                        tools:ignore="HardcodedText" />
+                    <TextView
+                        android:textSize="17dp"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:id="@+id/id_text_room_price_summer"
+                        android:layout_below="@+id/id_price__room"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Đơn gìa hè"
+                        tools:ignore="HardcodedText" />
+
+                    <View
+                        android:id="@+id/id_room_price_summer_space"
+                        android:layout_below="@+id/id_price__room"
+                        android:layout_toRightOf="@+id/id_text_room_price_summer"
+                        android:layout_width="45dp"
+                        android:layout_height="20dp" />
+
+                    <TextView
+                        android:id="@+id/id_price_room_summer"
+                        android:layout_below="@+id/id_price__room"
+                        android:layout_toRightOf="@+id/id_room_price_summer_space"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="550.000 VND"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:textSize="17dp"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:id="@+id/id_text_bed_number"
+                        android:layout_below="@+id/id_price_room_summer"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Số giường"
+                        tools:ignore="HardcodedText" />
+
+                    <View
+                        android:id="@+id/id_text_bed_number_space"
+                        android:layout_below="@+id/id_price_room_summer"
+                        android:layout_toRightOf="@+id/id_text_bed_number"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp" />
+
+                    <LinearLayout
+                        android:layout_below="@+id/id_price_room_summer"
+                        android:layout_toRightOf="@+id/id_text_bed_number_space"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:src="@drawable/bed_person"
+                            tools:ignore="ContentDescription" />
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:src="@drawable/bed_person"
+                            tools:ignore="ContentDescription" />
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:src="@drawable/bed_person"/>
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:src="@drawable/only_bed"/>
+                    </LinearLayout>
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</LinearLayout>

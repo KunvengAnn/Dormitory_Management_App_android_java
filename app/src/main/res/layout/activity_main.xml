@@ -1,0 +1,505 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:fillViewport="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:ignore="UselessLeaf"
+            tools:layout_editor_absoluteX="83dp"
+            tools:layout_editor_absoluteY="143dp">
+
+            <LinearLayout
+                android:id="@+id/layout0"
+                android:layout_width="match_parent"
+                android:layout_height="20dp">
+            </LinearLayout>
+            <LinearLayout
+                android:layout_below="@+id/layout0"
+                android:layout_width="match_parent"
+                android:id="@+id/layout1"
+                android:layout_height="80dp"
+                android:layout_marginLeft="5dp"
+                android:orientation="horizontal">
+
+                <!--start frame layout-->
+                <FrameLayout
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    tools:ignore="UselessParent">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/circle_shape" />
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/user" />
+                </FrameLayout>
+                <!--end frame layout-->
+                <!-- Start vertical linear layout -->
+                <LinearLayout
+                    android:layout_marginLeft="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        android:text="Admin"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Hi, Nguyễn Hoàng Bảo" />
+                </LinearLayout>
+                <!-- End vertical linear layout -->
+
+                <!-- Spacer View -->
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <!-- start right frame layout -->
+                <FrameLayout
+                    android:layout_width="130dp"
+                    android:layout_height="60dp"
+                    android:background="@drawable/rounded_border">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical|center_horizontal">
+
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:contentDescription="TODO"
+                            android:src="@drawable/logout"
+                            android:layout_marginEnd="8dp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/black"
+                            android:textStyle="bold"
+                            android:text="Logout"
+                            tools:ignore="HardcodedText" />
+                    </LinearLayout>
+                </FrameLayout>
+                <!-- end right frame layout -->
+            </LinearLayout>
+
+            <!--this like a body-->
+            <RelativeLayout
+                android:layout_below="@+id/layout1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <!--white container 1 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="130dp"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:id="@+id/layout_container_white_1"
+                    android:orientation="horizontal">
+
+                    <!-- Spacer View -->
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+
+
+
+                        <FrameLayout
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:background="@drawable/style_container"
+                            android:rotation="130">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical"
+                                android:gravity="center_vertical|center_horizontal"
+                                android:rotation="-130">
+
+                                <ImageView
+                                    android:id="@+id/image_building"
+                                    android:layout_width="40dp"
+                                    android:layout_height="40dp"
+                                    android:src="@drawable/office_building"
+                                    />
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="CM"
+                                    android:textColor="@color/black"
+                                    android:textStyle="bold"
+                                    tools:ignore="HardcodedText" />
+                            </LinearLayout>
+                        </FrameLayout>
+                    <!--add some space-->
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+                    <FrameLayout
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:background="@drawable/style_container"
+                        android:rotation="130">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:gravity="center_vertical|center_horizontal"
+                            android:rotation="-130">
+
+                            <ImageView
+                                android:id="@+id/image_student_card"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:src="@drawable/student_card"
+                                />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Sinh viên"
+                                android:textColor="@color/black"
+                                android:textStyle="bold"
+                                tools:ignore="HardcodedText" />
+                        </LinearLayout>
+                    </FrameLayout>
+
+                    <!-- Spacer View -->
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+
+                </LinearLayout>
+
+                <!--white container 2-->
+                <LinearLayout
+                    android:id="@+id/layout_container_white_2"
+                    android:layout_marginTop="100dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="130dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_horizontal|center_vertical">
+
+                    <FrameLayout
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:rotation="130"
+                        android:background="@drawable/style_container"> <!-- Rotation property added -->
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:gravity="center_vertical|center_horizontal"
+                            android:rotation="-130">
+
+                            <ImageView
+                                android:id="@+id/image_dash_board"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:contentDescription="TODO"
+                                android:src="@drawable/dashboard"
+                                />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Dash board"
+                                android:textColor="@color/black"
+                                android:textStyle="bold"
+                                tools:ignore="HardcodedText" />
+                        </LinearLayout>
+                    </FrameLayout>
+                </LinearLayout>
+
+                <!--white container 3-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="130dp"
+                    android:layout_marginTop="80dp"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:layout_below="@id/layout_container_white_1"
+                    android:id="@+id/layout_container_white_3"
+                    android:orientation="horizontal">
+
+                    <!-- Spacer View -->
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+
+
+
+                    <FrameLayout
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:background="@drawable/style_container"
+                        android:rotation="130">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:gravity="center_vertical|center_horizontal"
+                            android:rotation="-130">
+
+                            <ImageView
+                                android:id="@+id/image_rent_building"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:src="@drawable/rent_building"
+                                />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Thuê Phòng"
+                                android:textColor="@color/black"
+                                android:textStyle="bold"
+                                tools:ignore="HardcodedText" />
+                        </LinearLayout>
+                    </FrameLayout>
+                    <!--add some space-->
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+                    <FrameLayout
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:background="@drawable/style_container"
+                        android:rotation="130">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:gravity="center_vertical|center_horizontal"
+                            android:rotation="-130"
+                            tools:ignore="UseCompoundDrawables">
+
+                            <ImageView
+                                android:id="@+id/image_service"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:src="@drawable/service"
+                                />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Dịch vụ"
+                                android:textColor="@color/black"
+                                android:textStyle="bold"
+                                tools:ignore="HardcodedText" />
+                        </LinearLayout>
+                    </FrameLayout>
+
+                    <!-- Spacer View -->
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+
+                </LinearLayout>
+
+                <!--white container 4-->
+                <LinearLayout
+                    android:layout_below="@id/layout_container_white_2"
+                    android:layout_marginTop="80dp"
+                    android:id="@+id/layout_container_white_4"
+                    android:layout_width="match_parent"
+                    android:layout_height="130dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_horizontal|center_vertical">
+
+                    <FrameLayout
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:rotation="130"
+                        android:background="@drawable/style_container"> <!-- Rotation property added -->
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:gravity="center_vertical|center_horizontal"
+                            android:rotation="-130"
+                            tools:ignore="UseCompoundDrawables">
+
+                            <ImageView
+                                android:id="@+id/image_repair"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:src="@drawable/repair_tools"
+                                />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Sửa chũa"
+                                android:textColor="@color/black"
+                                android:textStyle="bold"
+                                tools:ignore="HardcodedText" />
+                        </LinearLayout>
+                    </FrameLayout>
+                </LinearLayout>
+
+                <!--white container 5-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="130dp"
+                    android:layout_marginTop="80dp"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:layout_below="@id/layout_container_white_3"
+                    android:id="@+id/layout_container_white_5"
+                    android:orientation="horizontal">
+
+                    <!-- Spacer View -->
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+
+                    <FrameLayout
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:background="@drawable/style_container"
+                        android:rotation="130">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:gravity="center_vertical|center_horizontal"
+                            android:rotation="-130">
+
+                            <ImageView
+                                android:id="@+id/image_message"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:src="@drawable/chat_box"
+                                />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Tương tác"
+                                android:textColor="@color/black"
+                                android:textStyle="bold"
+                                tools:ignore="HardcodedText" />
+                        </LinearLayout>
+                    </FrameLayout>
+                    <!--add some space-->
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+                    <FrameLayout
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:background="@drawable/style_container"
+                        android:rotation="130">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:gravity="center_vertical|center_horizontal"
+                            android:rotation="-130"
+                            tools:ignore="UseCompoundDrawables">
+
+                            <ImageView
+                                android:id="@+id/image_notification"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:src="@drawable/notification_bell"
+                                />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Thống báo"
+                                android:textColor="@color/black"
+                                android:textStyle="bold"
+                                tools:ignore="HardcodedText" />
+                        </LinearLayout>
+                    </FrameLayout>
+
+                    <!-- Spacer View -->
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+
+                </LinearLayout>
+
+                <!--white container 6-->
+                <LinearLayout
+                    android:layout_below="@+id/layout_container_white_4"
+                    android:id="@+id/layout_container_white_6"
+                    android:layout_marginTop="80dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="130dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_horizontal|center_vertical">
+
+                    <FrameLayout
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:rotation="130"
+                        android:background="@drawable/style_container"> <!-- Rotation property added -->
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:gravity="center_vertical|center_horizontal"
+                            android:rotation="-130">
+
+                            <ImageView
+                                android:id="@+id/image_setting"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:src="@drawable/settings"
+                                />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Cái đặt"
+                                android:textColor="@color/black"
+                                android:textStyle="bold"
+                                tools:ignore="HardcodedText" />
+                        </LinearLayout>
+                    </FrameLayout>
+                </LinearLayout>
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
+
