@@ -23,7 +23,7 @@ public class Sp_page extends AppCompatActivity {
             @Override
             public void run() {
                 // After the Sp_page duration, start the main activity
-                Intent mainIntent = new Intent(Sp_page.this, MainActivity.class);
+                Intent mainIntent = new Intent(Sp_page.this, Main_login_register_page.class);
                 startActivity(mainIntent);
                 finish();
             }

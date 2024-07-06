@@ -23,13 +23,13 @@
             <LinearLayout
                 android:id="@+id/layout0"
                 android:layout_width="match_parent"
-                android:layout_height="20dp">
-            </LinearLayout>
+                android:layout_height="20dp"></LinearLayout>
+
             <LinearLayout
-                android:layout_below="@+id/layout0"
-                android:layout_width="match_parent"
                 android:id="@+id/layout1"
+                android:layout_width="match_parent"
                 android:layout_height="80dp"
+                android:layout_below="@+id/layout0"
                 android:layout_marginLeft="5dp"
                 android:orientation="horizontal">
 
@@ -53,17 +53,17 @@
                 <!--end frame layout-->
                 <!-- Start vertical linear layout -->
                 <LinearLayout
-                    android:layout_marginLeft="5dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
                     android:orientation="vertical">
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:text="Admin"
                         android:textColor="@color/black"
                         android:textStyle="bold"
-                        android:text="Admin"
                         tools:ignore="HardcodedText" />
 
                     <TextView
@@ -88,22 +88,22 @@
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:orientation="horizontal"
-                        android:gravity="center_vertical|center_horizontal">
+                        android:gravity="center_vertical|center_horizontal"
+                        android:orientation="horizontal">
 
                         <ImageView
                             android:layout_width="24dp"
                             android:layout_height="24dp"
+                            android:layout_marginEnd="8dp"
                             android:contentDescription="TODO"
-                            android:src="@drawable/logout"
-                            android:layout_marginEnd="8dp"/>
+                            android:src="@drawable/logout" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:text="Logout"
                             android:textColor="@color/black"
                             android:textStyle="bold"
-                            android:text="Logout"
                             tools:ignore="HardcodedText" />
                     </LinearLayout>
                 </FrameLayout>
@@ -112,16 +112,16 @@
 
             <!--this like a body-->
             <RelativeLayout
-                android:layout_below="@+id/layout1"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/layout1">
 
                 <!--white container 1 -->
                 <LinearLayout
+                    android:id="@+id/layout_container_white_1"
                     android:layout_width="match_parent"
                     android:layout_height="130dp"
                     android:gravity="center_horizontal|center_vertical"
-                    android:id="@+id/layout_container_white_1"
                     android:orientation="horizontal">
 
                     <!-- Spacer View -->
@@ -130,41 +130,6 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1" />
 
-
-
-                        <FrameLayout
-                            android:layout_width="100dp"
-                            android:layout_height="100dp"
-                            android:background="@drawable/style_container"
-                            android:rotation="130">
-
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:orientation="vertical"
-                                android:gravity="center_vertical|center_horizontal"
-                                android:rotation="-130">
-
-                                <ImageView
-                                    android:id="@+id/image_building"
-                                    android:layout_width="40dp"
-                                    android:layout_height="40dp"
-                                    android:src="@drawable/office_building"
-                                    />
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:text="CM"
-                                    android:textColor="@color/black"
-                                    android:textStyle="bold"
-                                    tools:ignore="HardcodedText" />
-                            </LinearLayout>
-                        </FrameLayout>
-                    <!--add some space-->
-                    <View
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1" />
                     <FrameLayout
                         android:layout_width="100dp"
                         android:layout_height="100dp"
@@ -172,18 +137,61 @@
                         android:rotation="130">
 
                         <LinearLayout
+                            android:id="@+id/id_linear_CM"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:background="@drawable/ripple_effect_click"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:orientation="vertical"
                             android:gravity="center_vertical|center_horizontal"
+                            android:orientation="vertical"
+                            android:rotation="-130"
+                            tools:ignore="UselessParent">
+
+                            <ImageView
+                                android:id="@+id/image_building"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:src="@drawable/office_building" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="CM"
+                                android:textColor="@color/black"
+                                android:textStyle="bold"
+                                tools:ignore="HardcodedText" />
+                        </LinearLayout>
+                    </FrameLayout>
+                    <!--add some space-->
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+
+                    <FrameLayout
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:background="@drawable/style_container"
+                        android:rotation="130">
+
+                        <LinearLayout
+                            android:id="@+id/id_linear_student"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:background="?attr/selectableItemBackground"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical|center_horizontal"
+                            android:orientation="vertical"
                             android:rotation="-130">
 
                             <ImageView
                                 android:id="@+id/image_student_card"
                                 android:layout_width="40dp"
                                 android:layout_height="40dp"
-                                android:src="@drawable/student_card"
-                                />
+                                android:src="@drawable/student_card" />
+
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
@@ -205,23 +213,28 @@
                 <!--white container 2-->
                 <LinearLayout
                     android:id="@+id/layout_container_white_2"
-                    android:layout_marginTop="100dp"
                     android:layout_width="match_parent"
                     android:layout_height="130dp"
-                    android:orientation="horizontal"
-                    android:gravity="center_horizontal|center_vertical">
+                    android:layout_marginTop="100dp"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:orientation="horizontal">
 
                     <FrameLayout
                         android:layout_width="100dp"
                         android:layout_height="100dp"
+                        android:background="@drawable/style_container"
                         android:rotation="130"
-                        android:background="@drawable/style_container"> <!-- Rotation property added -->
+                        tools:ignore="UselessParent"> <!-- Rotation property added -->
 
                         <LinearLayout
+                            android:id="@+id/id_linear_dashBoard"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:background="?attr/selectableItemBackground"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:orientation="vertical"
                             android:gravity="center_vertical|center_horizontal"
+                            android:orientation="vertical"
                             android:rotation="-130">
 
                             <ImageView
@@ -230,7 +243,8 @@
                                 android:layout_height="40dp"
                                 android:contentDescription="TODO"
                                 android:src="@drawable/dashboard"
-                                />
+                                tools:ignore="HardcodedText" />
+
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
@@ -244,12 +258,12 @@
 
                 <!--white container 3-->
                 <LinearLayout
+                    android:id="@+id/layout_container_white_3"
                     android:layout_width="match_parent"
                     android:layout_height="130dp"
+                    android:layout_below="@id/layout_container_white_1"
                     android:layout_marginTop="80dp"
                     android:gravity="center_horizontal|center_vertical"
-                    android:layout_below="@id/layout_container_white_1"
-                    android:id="@+id/layout_container_white_3"
                     android:orientation="horizontal">
 
                     <!-- Spacer View -->
@@ -259,7 +273,6 @@
                         android:layout_weight="1" />
 
 
-
                     <FrameLayout
                         android:layout_width="100dp"
                         android:layout_height="100dp"
@@ -267,18 +280,21 @@
                         android:rotation="130">
 
                         <LinearLayout
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:background="?attr/selectableItemBackground"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:orientation="vertical"
                             android:gravity="center_vertical|center_horizontal"
+                            android:orientation="vertical"
                             android:rotation="-130">
 
                             <ImageView
                                 android:id="@+id/image_rent_building"
                                 android:layout_width="40dp"
                                 android:layout_height="40dp"
-                                android:src="@drawable/rent_building"
-                                />
+                                android:src="@drawable/rent_building" />
+
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
@@ -293,6 +309,7 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1" />
+
                     <FrameLayout
                         android:layout_width="100dp"
                         android:layout_height="100dp"
@@ -300,10 +317,13 @@
                         android:rotation="130">
 
                         <LinearLayout
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:background="?attr/selectableItemBackground"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:orientation="vertical"
                             android:gravity="center_vertical|center_horizontal"
+                            android:orientation="vertical"
                             android:rotation="-130"
                             tools:ignore="UseCompoundDrawables">
 
@@ -311,8 +331,8 @@
                                 android:id="@+id/image_service"
                                 android:layout_width="40dp"
                                 android:layout_height="40dp"
-                                android:src="@drawable/service"
-                                />
+                                android:src="@drawable/service" />
+
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
@@ -333,25 +353,28 @@
 
                 <!--white container 4-->
                 <LinearLayout
-                    android:layout_below="@id/layout_container_white_2"
-                    android:layout_marginTop="80dp"
                     android:id="@+id/layout_container_white_4"
                     android:layout_width="match_parent"
                     android:layout_height="130dp"
-                    android:orientation="horizontal"
-                    android:gravity="center_horizontal|center_vertical">
+                    android:layout_below="@id/layout_container_white_2"
+                    android:layout_marginTop="80dp"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:orientation="horizontal">
 
                     <FrameLayout
                         android:layout_width="100dp"
                         android:layout_height="100dp"
-                        android:rotation="130"
-                        android:background="@drawable/style_container"> <!-- Rotation property added -->
+                        android:background="@drawable/style_container"
+                        android:rotation="130"> <!-- Rotation property added -->
 
                         <LinearLayout
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:background="?attr/selectableItemBackground"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:orientation="vertical"
                             android:gravity="center_vertical|center_horizontal"
+                            android:orientation="vertical"
                             android:rotation="-130"
                             tools:ignore="UseCompoundDrawables">
 
@@ -359,8 +382,8 @@
                                 android:id="@+id/image_repair"
                                 android:layout_width="40dp"
                                 android:layout_height="40dp"
-                                android:src="@drawable/repair_tools"
-                                />
+                                android:src="@drawable/repair_tools" />
+
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
@@ -374,12 +397,12 @@
 
                 <!--white container 5-->
                 <LinearLayout
+                    android:id="@+id/layout_container_white_5"
                     android:layout_width="match_parent"
                     android:layout_height="130dp"
+                    android:layout_below="@id/layout_container_white_3"
                     android:layout_marginTop="80dp"
                     android:gravity="center_horizontal|center_vertical"
-                    android:layout_below="@id/layout_container_white_3"
-                    android:id="@+id/layout_container_white_5"
                     android:orientation="horizontal">
 
                     <!-- Spacer View -->
@@ -395,18 +418,21 @@
                         android:rotation="130">
 
                         <LinearLayout
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:background="?attr/selectableItemBackground"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:orientation="vertical"
                             android:gravity="center_vertical|center_horizontal"
+                            android:orientation="vertical"
                             android:rotation="-130">
 
                             <ImageView
                                 android:id="@+id/image_message"
                                 android:layout_width="40dp"
                                 android:layout_height="40dp"
-                                android:src="@drawable/chat_box"
-                                />
+                                android:src="@drawable/chat_box" />
+
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
@@ -421,6 +447,7 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1" />
+
                     <FrameLayout
                         android:layout_width="100dp"
                         android:layout_height="100dp"
@@ -428,10 +455,13 @@
                         android:rotation="130">
 
                         <LinearLayout
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:background="?attr/selectableItemBackground"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:orientation="vertical"
                             android:gravity="center_vertical|center_horizontal"
+                            android:orientation="vertical"
                             android:rotation="-130"
                             tools:ignore="UseCompoundDrawables">
 
@@ -439,8 +469,8 @@
                                 android:id="@+id/image_notification"
                                 android:layout_width="40dp"
                                 android:layout_height="40dp"
-                                android:src="@drawable/notification_bell"
-                                />
+                                android:src="@drawable/notification_bell" />
+
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
@@ -461,33 +491,36 @@
 
                 <!--white container 6-->
                 <LinearLayout
-                    android:layout_below="@+id/layout_container_white_4"
                     android:id="@+id/layout_container_white_6"
-                    android:layout_marginTop="80dp"
                     android:layout_width="match_parent"
                     android:layout_height="130dp"
-                    android:orientation="horizontal"
-                    android:gravity="center_horizontal|center_vertical">
+                    android:layout_below="@+id/layout_container_white_4"
+                    android:layout_marginTop="80dp"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:orientation="horizontal">
 
                     <FrameLayout
                         android:layout_width="100dp"
                         android:layout_height="100dp"
-                        android:rotation="130"
-                        android:background="@drawable/style_container"> <!-- Rotation property added -->
+                        android:background="@drawable/style_container"
+                        android:rotation="130"> <!-- Rotation property added -->
 
                         <LinearLayout
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:background="?attr/selectableItemBackground"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:orientation="vertical"
                             android:gravity="center_vertical|center_horizontal"
+                            android:orientation="vertical"
                             android:rotation="-130">
 
                             <ImageView
                                 android:id="@+id/image_setting"
                                 android:layout_width="40dp"
                                 android:layout_height="40dp"
-                                android:src="@drawable/settings"
-                                />
+                                android:src="@drawable/settings" />
+
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"

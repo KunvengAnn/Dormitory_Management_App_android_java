@@ -21,14 +21,14 @@
             android:textSize="18dp"
             android:textStyle="bold"
             android:text="Tầng "
-            tools:ignore="HardcodedText" />
+            tools:ignore="HardcodedText,SpUsage" />
         <TextView
             android:id="@+id/id_text_floor"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="18dp"
             android:textStyle="bold"
-            tools:ignore="HardcodedText" />
+            tools:ignore="HardcodedText,SpUsage" />
 
         <View
             android:layout_width="0dp"

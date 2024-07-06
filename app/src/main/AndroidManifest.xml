@@ -13,7 +13,7 @@
         android:theme="@style/Theme.Ky_tuc_xa_ui"
         tools:targetApi="31">
         <activity
-            android:name=".pages.Cm_page"
+            android:name=".pages.Sp_page"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -23,7 +23,11 @@
         </activity>
 
         <activity android:name=".MainActivity"> </activity>
-<!--        <activity android:name=".pages.Dash_board_page"> </activity>-->
+        <activity android:name=".pages.Dash_board_page"> </activity>
+        <activity android:name=".pages.Login_Page"> </activity>
+        <activity android:name=".pages.Register_Page"> </activity>
+        <activity android:name=".pages.Main_login_register_page"> </activity>
+        <activity android:name=".pages.Cm_page"> </activity>
     </application>
 
 </manifest>
