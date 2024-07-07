@@ -26,7 +26,11 @@
         <activity android:name=".pages.Dash_board_page"> </activity>
         <activity android:name=".pages.Login_Page"> </activity>
         <activity android:name=".pages.Register_Page"> </activity>
-        <activity android:name=".pages.Main_login_register_page"> </activity>
+
+        <!--android:launchMode="singleTask" just one run not repeat again-->
+        <activity android:name=".pages.Main_login_register_page"
+            android:launchMode="singleTask">
+        </activity>
         <activity android:name=".pages.Cm_page"> </activity>
     </application>
 
